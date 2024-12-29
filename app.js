@@ -35,7 +35,7 @@ bot.on("message", (msg) => {
   if (msg.text === "/start") {
     bot.sendMessage(
       msg.chat.id,
-      `*👋 Welcome to Khmer Limon F1 Converter Bot!*\n\n_This bot is designed to convert Khmer text to Limon F1. Simply send any Khmer text to get started._\n\n_Powered By: Chann Kimlong_`,
+      `*👋 Welcome to Khmer Limon F1 Converter Bot!*\n\n_This bot is designed to convert Khmer text to Limon F1. Simply send any Khmer text to get started._\n\n_References:_\n\n- [Download Limon Khmer Font](https://khmersoft.net/download-font-limon-khmer-font-for-your-computer/)\n- [Khmer Unicode Converter GitHub](https://github.com/seanghay/khmer-unicode-converter?tab=readme-ov-file)\n- [How to Add Khmer Text on CapCut - Video Tutorial](https://youtu.be/1N1Dp7JqGVE?si=1JFlgJaM2AnQOZ4t)\n\n_Powered By: Chann Kimlong_`,
       { parse_mode: "Markdown" }
     );
 
@@ -46,6 +46,24 @@ bot.on("message", (msg) => {
       `*👋 Welcome to Khmer Limon F1 Converter Bot!*\n\n_This bot is designed to convert Khmer text to Limon F1. Simply send any Khmer text to get started._\n\n_For the Limon F1 font, you can download it here: https://khmersoft.net/download-font-limon-khmer-font-for-your-computer/_\n\n_For a tutorial on how to add Khmer text to CapCut, watch this video: https://youtu.be/1N1Dp7JqGVE?si=D9WrtIQbranJ7xp7_\n\n_Powered By: Chann Kimlong_`,
       { parse_mode: "Markdown" }
     );
+
+    return;
+  } else if (text === "/buymecoffee") {
+    const imageUrl =
+      "https://kimlongchann.netlify.app/static/media/abaRiel.884a4e2cc5b0663b9aed.jpg";
+    const description = `Buy me coffee: 
+
+Account-holder name: CHANN KIMLONG
+Account number: 003 518 654
+
+Or tap on the link below to send payment:
+[Send Payment](https://pay.ababank.com/zW6tKmrDP37urvfx8)`;
+
+    // Send the image and description
+    bot.sendPhoto(chatId, imageUrl, {
+      caption: description,
+      parse_mode: "Markdown",
+    });
 
     return;
   }
