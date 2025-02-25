@@ -82,7 +82,7 @@ Or tap on the link below to send payment:
     // Send the converted text back to the user
     bot.sendMessage(
       chatId,
-      `*✨ Converted Text (Limon F1) ✨*\n\n\`\`\`\n\n${convertedText}\n\n\`\`\`\n_Powered By: Chann Kimlong_`,
+      `*✨ Converted Text (Limon F1) ✨*\n\`\`\`${convertedText}\`\`\`\n_Powered By: Chann Kimlong_`,
       { parse_mode: "Markdown" }
     );
   }
